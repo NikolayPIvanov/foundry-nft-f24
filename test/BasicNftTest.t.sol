@@ -10,8 +10,8 @@ contract BasicNftTest is Test {
     BasicNft public nft;
 
     address public user = makeAddr("user");
-    string public constant PUG_URI =
-        "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+    string public constant PURRARI_URI =
+        "ipfs://bafybeihznsjkrrwz6grf4qzkwpc5rdwmlkptg5r33sab5yfh6ar2yhsfze/?filename=purrari.json";
 
     function setUp() public {
         deployer = new DeployBasicNft();
@@ -29,9 +29,9 @@ contract BasicNftTest is Test {
     function testCanMintAndHaveABalance() public {
         vm.prank(user);
 
-        nft.mintNft(PUG_URI);
+        nft.mintNft(PURRARI_URI);
 
         assert(nft.balanceOf(user) == 1);
-        assert(keccak256(abi.encodePacked(PUG_URI)) == keccak256(abi.encodePacked(nft.tokenURI(0))));
+        assert(keccak256(abi.encodePacked(PURRARI_URI)) == keccak256(abi.encodePacked(nft.tokenURI(0))));
     }
 }

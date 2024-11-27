@@ -18,6 +18,6 @@ contract BasicNft is ERC721 {
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        return "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+        return "ipfs://bafybeihznsjkrrwz6grf4qzkwpc5rdwmlkptg5r33sab5yfh6ar2yhsfze/?filename=purrari.json";
     }
 }
