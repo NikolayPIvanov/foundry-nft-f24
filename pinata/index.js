@@ -9,7 +9,16 @@ const pinata = new PinataSDK({
 
 async function upload() {
   try {
-    const blob = new Blob([fs.readFileSync("./purarri.json")]);
+    // const imageBlob = new Blob([fs.readFileSync("./data/nimbus.jpeg")]);
+    // const nimbusFile = new File([imageBlob], "nimbus.jpeg", {
+    //   type: "image/jpeg",
+    // });
+    // const uploadImage = await pinata.upload.file(nimbusFile, {
+    //   cidVersion: 1,
+    // });
+    // console.log(uploadImage);
+
+    const blob = new Blob([fs.readFileSync("./data/purarri.json")]);
     const file = new File([blob], "purarri.json", {
       type: "application/json",
     });

@@ -11,7 +11,7 @@ contract BasicNftTest is Test {
 
     address public user = makeAddr("user");
     string public constant PURARRI_URI =
-        "ipfs://bafkreifzadtolb5xea6u2doktnxeovwo4p7vv3ywaryqhe3ghlsbmwqggy/?filename=purarri.json";
+        "ipfs://bafkreif4ttndt4ctbsd56m72junhxravoq4qpfy7qngdchp2tuelwtilha/?filename=purarri.json";
 
     function setUp() public {
         deployer = new DeployBasicNft();

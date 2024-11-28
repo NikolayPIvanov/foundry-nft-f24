@@ -7,7 +7,7 @@ import {DevOpsTools} from "foundry-devops/DevOpsTools.sol";
 
 contract MintBasicNft is Script {
     string public constant PURARRI_URL =
-        "ipfs://bafkreifzadtolb5xea6u2doktnxeovwo4p7vv3ywaryqhe3ghlsbmwqggy/?filename=purarri.json";
+        "ipfs://bafkreif4ttndt4ctbsd56m72junhxravoq4qpfy7qngdchp2tuelwtilha/?filename=purarri.json";
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNft", block.chainid);
