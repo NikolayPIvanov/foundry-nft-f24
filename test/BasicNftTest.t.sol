@@ -10,8 +10,8 @@ contract BasicNftTest is Test {
     BasicNft public nft;
 
     address public user = makeAddr("user");
-    string public constant PURRARI_URI =
-        "ipfs://bafybeihznsjkrrwz6grf4qzkwpc5rdwmlkptg5r33sab5yfh6ar2yhsfze/?filename=purrari.json";
+    string public constant PURARRI_URI =
+        "ipfs://bafkreifzadtolb5xea6u2doktnxeovwo4p7vv3ywaryqhe3ghlsbmwqggy/?filename=purarri.json";
 
     function setUp() public {
         deployer = new DeployBasicNft();
@@ -20,7 +20,7 @@ contract BasicNftTest is Test {
     }
 
     function test_NameIsCorrect() public view {
-        string memory expectedName = "Purrari";
+        string memory expectedName = "Purarri";
         string memory actualName = nft.name();
 
         assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(actualName)));
@@ -29,9 +29,9 @@ contract BasicNftTest is Test {
     function testCanMintAndHaveABalance() public {
         vm.prank(user);
 
-        nft.mintNft(PURRARI_URI);
+        nft.mintNft(PURARRI_URI);
 
         assert(nft.balanceOf(user) == 1);
-        assert(keccak256(abi.encodePacked(PURRARI_URI)) == keccak256(abi.encodePacked(nft.tokenURI(0))));
+        assert(keccak256(abi.encodePacked(PURARRI_URI)) == keccak256(abi.encodePacked(nft.tokenURI(0))));
     }
 }

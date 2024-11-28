@@ -6,8 +6,8 @@ import {BasicNft} from "../src/BasicNft.sol";
 import {DevOpsTools} from "foundry-devops/DevOpsTools.sol";
 
 contract MintBasicNft is Script {
-    string public constant PURRARI_URI =
-        "ipfs://bafybeihznsjkrrwz6grf4qzkwpc5rdwmlkptg5r33sab5yfh6ar2yhsfze/?filename=purrari.json";
+    string public constant PURARRI_URL =
+        "ipfs://bafkreifzadtolb5xea6u2doktnxeovwo4p7vv3ywaryqhe3ghlsbmwqggy/?filename=purarri.json";
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNft", block.chainid);
@@ -18,7 +18,7 @@ contract MintBasicNft is Script {
     function mintNftOnContract(address _mostRecentlyDeployed) public {
         vm.startBroadcast();
 
-        BasicNft(_mostRecentlyDeployed).mintNft(PURRARI_URI);
+        BasicNft(_mostRecentlyDeployed).mintNft(PURARRI_URL);
 
         vm.stopBroadcast();
     }
